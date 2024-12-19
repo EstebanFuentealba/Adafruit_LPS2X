@@ -84,7 +84,7 @@ public:
       @param parent A pointer to the LPS2X class */
   Adafruit_LPS2X_Temp(Adafruit_LPS2X *parent) { _theLPS2X = parent; }
   bool getEvent(sensors_event_t *);
-  void getSensor(sensor_t *);
+  void getSensor(sensor_adafruit_t *);
 
 private:
   int _sensorID = 0x25;
@@ -99,7 +99,7 @@ public:
       @param parent A pointer to the LPS2X class */
   Adafruit_LPS2X_Pressure(Adafruit_LPS2X *parent) { _theLPS2X = parent; }
   bool getEvent(sensors_event_t *);
-  void getSensor(sensor_t *);
+  void getSensor(sensor_adafruit_t *);
 
 private:
   int _sensorID = 0x26;
