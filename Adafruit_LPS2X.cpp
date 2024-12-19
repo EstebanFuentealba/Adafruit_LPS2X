@@ -265,13 +265,13 @@ void Adafruit_LPS2X::fillTempEvent(sensors_event_t *temp, uint32_t timestamp) {
 
 /**************************************************************************/
 /*!
-    @brief  Gets the sensor_t data for the LPS2X's tenperature
-    @param  sensor The allocated sensor_t that we will fill!
+    @brief  Gets the sensor_adafruit_t data for the LPS2X's tenperature
+    @param  sensor The allocated sensor_adafruit_t that we will fill!
 */
 /**************************************************************************/
-void Adafruit_LPS2X_Pressure::getSensor(sensor_t *sensor) {
-  /* Clear the sensor_t object */
-  memset(sensor, 0, sizeof(sensor_t));
+void Adafruit_LPS2X_Pressure::getSensor(sensor_adafruit_t *sensor) {
+  /* Clear the sensor_adafruit_t object */
+  memset(sensor, 0, sizeof(sensor_adafruit_t));
 
   /* Insert the sensor name in the fixed length char array */
   strncpy(sensor->name, "LPS2X_P", sizeof(sensor->name) - 1);
@@ -302,13 +302,13 @@ bool Adafruit_LPS2X_Pressure::getEvent(sensors_event_t *event) {
 
 /**************************************************************************/
 /*!
-    @brief  Gets the sensor_t data for the LPS2X's tenperature
-    @param  sensor The allocated sensor_t that we will fill!
+    @brief  Gets the sensor_adafruit_t data for the LPS2X's tenperature
+    @param  sensor The allocated sensor_adafruit_t that we will fill!
 */
 /**************************************************************************/
-void Adafruit_LPS2X_Temp::getSensor(sensor_t *sensor) {
-  /* Clear the sensor_t object */
-  memset(sensor, 0, sizeof(sensor_t));
+void Adafruit_LPS2X_Temp::getSensor(sensor_adafruit_t *sensor) {
+  /* Clear the sensor_adafruit_t object */
+  memset(sensor, 0, sizeof(sensor_adafruit_t));
 
   /* Insert the sensor name in the fixed length char array */
   strncpy(sensor->name, "LPS2X_T", sizeof(sensor->name) - 1);
